@@ -57,7 +57,7 @@ const App = props => {
                 'api-token': localStorage.getItem('token')
             }
         }
-        axios.post('http://localhost:8000/users/authorize', {}, config)
+        axios.post('http://localhost:8000/api/users/authorize', {}, config)
             .then(response => setEmail(response.data.email))
             .catch(err => {
                 console.log("App:63: err.response.statusText =", err.response.statusText);
